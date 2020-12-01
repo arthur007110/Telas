@@ -93,6 +93,9 @@
                 side_nav.hidden = true;
                 main.classList.remove("main");
             }
+            function mostrarusuario(){
+                console.log(JSON.parse(localStorage.getItem("user")));
+            }
         </script>
     </head>
     <body>
@@ -113,6 +116,7 @@
         </div>
         <main id="main">
             <h1 style="text-align: center;">SEGURANÇA DO TRABALHO</h1>
+            <button onclick="mostrarusuario()">CLICKME</button>
         </main>
     </body>
 </html>

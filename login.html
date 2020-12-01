@@ -13,28 +13,28 @@
             font-size: 16px;
         }
         </style>
+        <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
+        <script src="login.js"></script>
         <script>
             function logar(){
-                window.open('inicio.html');
+                login(document.getElementById("email").value, document.getElementById("senha").value);
             }
         </script>
         </head>
         
         <body>
             <div class="login">
-                <img src="./img/20b9c8b4-a7c2-4861-a9d3-39f00c1e6f10.jpg"
-                class="usuario" width="100" height="100" alt="">
+                <!--<img src="./img/20b9c8b4-a7c2-4861-a9d3-39f00c1e6f10.jpg"
+                class="usuario" width="100" height="100" alt="">-->
                 <h1>Login</h1>
                 <form>
                 <p>Email</p>
-                <input type="email" placeholder="Email">
+                <input id="email" type="email" placeholder="Email">
                 <p>Senha</p>
-                <input type="password" placeholder="Senha">
-                <input type="submit" value="Logar" onclick="logar()">
-                <a href="cadastro.html">Ainda não possui uma conta?</a>
-            
+                <input id="senha" type="password" placeholder="Senha">
                 </form>
-        
+                <button class="button_login" onclick="logar()">Login</button>
+                <a href="cadastro.html">Ainda não possui uma conta?</a>
             </div>
         </body>
 </html>
